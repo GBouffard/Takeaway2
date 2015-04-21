@@ -10,7 +10,7 @@ describe Dish do
     expect(dish.price).to eq 5
   end
 
-  it 'has an initial quantity (or a quantity to add to an existing quantity)' do
+  it 'has an initial quantity (or refers to quantity to add to an existing quantity)' do
     expect(dish.quantity).to eq 22
   end
 end
