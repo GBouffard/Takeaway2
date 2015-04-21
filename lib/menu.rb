@@ -5,6 +5,11 @@ class Menu
   end
 
   def add_dish(dish)
-    list[dish.name] = dish.price
+    if list.key?(dish.name)
+      new_q = list[dish.name].last + dish.quantity
+      list[dish.name] = [dish.price, new_q]
+    else
+      list[dish.name] = [dish.price, dish.quantity]
+    end
   end
 end
